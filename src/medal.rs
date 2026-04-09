@@ -23,7 +23,7 @@ pub struct Medal;
 impl Medal {
     /// スコア判定: 左壁を越えて落下したか
     pub fn is_scoring_position(pos: Vec3) -> bool {
-        pos.x < -TRAY_WIDTH / 2.0 - 20.0 && pos.y < TRAY_FLOOR_Y + RIGHT_WALL_HEIGHT
+        pos.x < -TRAY_WIDTH / 2.0 - SCORING_MARGIN && pos.y < SCORING_MAX_Y
     }
 
     /// 場外判定: KILL_Y以下に落ちたか

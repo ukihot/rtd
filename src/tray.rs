@@ -30,8 +30,8 @@ fn setup_tray(
     ));
 
     // 右壁 — トレイ床の右端に立ち、プッシャー上面から浮かせる（プッシャーがその下をくぐる）
-    let side_wall_height = 350.0;
-    let side_wall_bottom = PUSHER_Y + PUSHER_HEIGHT / 2.0;
+    let side_wall_height = SIDE_WALL_HEIGHT;
+    let side_wall_bottom = PUSHER_TOP_Y;
     let right_wall_x = TRAY_WIDTH / 2.0 + RIGHT_WALL_THICKNESS / 2.0;
     commands.spawn((
         Mesh3d(meshes.add(Cuboid::new(
@@ -58,7 +58,7 @@ fn setup_tray(
     let slot_left = SLOT_CENTER_X - SLOT_WIDTH / 2.0;
     let slot_right = SLOT_CENTER_X + SLOT_WIDTH / 2.0;
 
-    let wall_bottom_y = side_wall_bottom;
+    let wall_bottom_y = PUSHER_TOP_Y;
     let wall_top_y = side_wall_bottom + side_wall_height;
 
     // 壁を4パーツに分割してスロット穴を作る（奥壁・手前壁それぞれ）
