@@ -2,7 +2,10 @@
 name = "rtd"
 version = "0.1.0"
 edition = "2024"
+description = "A 3D medal dropping game built with Bevy engine, featuring physics-based gameplay and scoring mechanics."
 
 [dependencies]
-bevy = { version = "0.18", default-features = false, features = ["2d", "ui"] }
-avian2d = "0.6"
+bevy = { version = "0.18", default-features = false, features = ["3d", "ui", "bevy_gizmos"] }
+avian3d = "0.6"
+rand = "0.10.0"
+bevy_panorbit_camera = "0.34"
