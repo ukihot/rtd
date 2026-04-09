@@ -99,7 +99,7 @@ fn drop_medal(
             .with_rotation(Quat::from_rotation_z(std::f32::consts::FRAC_PI_2)),
         RigidBody::Dynamic,
         Collider::cylinder(MEDAL_RADIUS, MEDAL_HEIGHT),
-        Mass(2.0),
+        Mass(20.0),
         Restitution::new(0.3),
         Friction::new(0.35),
         LinearVelocity(Vec3::new(0.0, 0.0, vel_z)),
